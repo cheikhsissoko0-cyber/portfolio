@@ -477,12 +477,24 @@
       <p class="mt-6 font-mono text-sm max-w-md mx-auto" style="color:#888892;">Un projet, une opportunité, une question ? Je suis ouvert à toute collaboration.</p>
     </div>
     <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-      <div class="reveal space-y-4">
-        <div><label class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:#555;">Nom complet</label><input type="text" placeholder="Votre nom" class="inp"/></div>
-        <div><label class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:#555;">Email</label><input type="email" placeholder="votre@email.com" class="inp"/></div>
-        <div><label class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:#555;">Message</label><textarea rows="5" placeholder="Décrivez votre projet..." class="inp" style="resize:none;"></textarea></div>
-        <button class="btn-glow w-full py-4 font-black text-sm uppercase tracking-widest" style="color:#06060a;">Envoyer le message →</button>
-      </div>
+
+      <!-- FORMULAIRE FORMSPREE -->
+      <form action="https://formspree.io/f/xzdjzvpz" method="POST" class="reveal space-y-4">
+        <div>
+          <label class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:#555;">Nom complet</label>
+          <input type="text" name="nom" placeholder="Votre nom" class="inp" required/>
+        </div>
+        <div>
+          <label class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:#555;">Email</label>
+          <input type="email" name="email" placeholder="votre@email.com" class="inp" required/>
+        </div>
+        <div>
+          <label class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:#555;">Message</label>
+          <textarea rows="5" name="message" placeholder="Décrivez votre projet..." class="inp" style="resize:none;" required></textarea>
+        </div>
+        <button type="submit" class="btn-glow w-full py-4 font-black text-sm uppercase tracking-widest" style="color:#06060a;">Envoyer le message →</button>
+      </form>
+
       <div class="reveal space-y-6">
         <div class="p-6" style="background:#0e0e16;border:1px solid #1a1a24;">
           <p class="font-mono text-xs uppercase tracking-wider mb-2" style="color:#555;">Email</p>
